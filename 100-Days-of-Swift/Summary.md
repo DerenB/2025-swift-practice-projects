@@ -18,6 +18,10 @@ Going through the [Hacking with SwiftUI](https://www.hackingwithswift.com/100/sw
     - [Booleans](#booleans)
     - [String Concat \& Inter](#string-concat--inter)
 - [Day 3](#day-3)
+    - [Arrays](#arrays)
+    - [Dictionaries](#dictionaries)
+    - [Sets](#sets)
+    - [Enum (Enumeration)](#enum-enumeration)
 
 
 
@@ -51,7 +55,40 @@ Going through the [Hacking with SwiftUI](https://www.hackingwithswift.com/100/sw
 
 # Day 3
 
+### Arrays
 
+- Declare empty array: `var scores = Array<Int>()`
+- Shorthand declaration: `var scores = [Int]()`
+- Arrays can only contain values of the same data type
+
+### Dictionaries 
+
+- Declare empty dictionary: `var heights = [String: Int]()`
+
+### Sets
+
+- Removes duplicates and does not save the order
+
+### Enum (Enumeration)
+
+- A set of named values
+- Only allows you to use values that are set with the cases
+```
+enum Weekday {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+}
+```
+- Shorthand:
+```
+enum Weekday {
+    case monday, tuesday, wednesday, thursday, friday
+}
+```
+- How to call: `var day = Weekday.monday`
 
 
 
