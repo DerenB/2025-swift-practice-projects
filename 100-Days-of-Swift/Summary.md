@@ -38,6 +38,10 @@ Going through the [Hacking with SwiftUI](https://www.hackingwithswift.com/100/sw
     - [Return Statements](#return-statements)
     - [Return Multiple Values](#return-multiple-values)
     - [Custom Parameter Labels](#custom-parameter-labels)
+- [Day 8](#day-8)
+    - [Function Default Parameters](#function-default-parameters)
+    - [Error Handling](#error-handling)
+- [Day 9](#day-9)
 
 
 
@@ -171,6 +175,22 @@ let lastName = user.lName
 - Can ignore values of the return statement with "_": `let (firstName, _) = getUser()`
 
 ### Custom Parameter Labels
+
+
+
+# Day 8
+
+### Function Default Parameters
+
+- `func printTimes(for number: Int, end: Int = 12)`
+
+### Error Handling
+
+
+
+# Day 9
+
+
 
 
 
