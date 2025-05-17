@@ -42,6 +42,17 @@ Going through the [Hacking with SwiftUI](https://www.hackingwithswift.com/100/sw
     - [Function Default Parameters](#function-default-parameters)
     - [Error Handling](#error-handling)
 - [Day 9](#day-9)
+    - [Closures](#closures)
+    - [Closures with Parameters](#closures-with-parameters)
+    - [Closures with Return Type](#closures-with-return-type)
+    - [Closures with Parameters \& Return type](#closures-with-parameters--return-type)
+- [Day 10](#day-10)
+    - [Structs](#structs)
+    - [Struct Property Changes](#struct-property-changes)
+    - [Struct Initializers](#struct-initializers)
+- [Day 11](#day-11)
+    - [Private Struct](#private-struct)
+- [Day 12](#day-12)
 
 
 
@@ -189,6 +200,120 @@ let lastName = user.lName
 
 
 # Day 9
+
+### Closures
+
+- Closure Example
+- Code has to be inside the brackets { }
+```
+let sayHello = {
+    print("Hi There)
+}
+
+sayHello() // Prints the statement statement
+```
+
+### Closures with Parameters
+
+```
+let payment = { (user: String) in
+    print ("Paying \(user)...")
+}
+```
+
+### Closures with Return Type
+
+```
+let payment = { () -> Bool in 
+    return true
+}
+```
+
+### Closures with Parameters & Return type
+
+- String parameter, returns string
+- The `in` marks the end of the parameters/return type, and the start of the closure
+```
+let sayHello = { (name: String) -> String in
+    "Hi \(name)"
+}
+```
+
+
+
+# Day 10
+
+### Structs
+
+- Simple Struct:
+- Variables and constants in a struct are "properties"
+- Functions in a struct are "methods"
+```
+struct Album {
+    let title: String
+    let artist: String
+    let year: Int
+
+    func printSummary() {
+        print("\(title) \(year) \(artist)")
+    }
+}
+```
+
+### Struct Property Changes
+
+- Can have `didSet` or `willSet` values for when the value in a struct changes
+- The code will run when the value changes or before
+- Swift automatically has `oldValue` and `newValue`
+```
+struct Game {
+    var score = 0 {
+        willSet {
+            print ("The current score is \(score)")
+            print ("The new score is \(newValue) ")
+        }
+
+        didSet {
+            print ("The score is now \(score)")
+            print ("The score used to be \()oldValue")
+        }
+    }
+}
+```
+
+### Struct Initializers 
+
+- Can customize the initializer for a struct
+- All properties must have a value by the end of initialization
+```
+struct Player {
+    let name: String
+    let number: Int
+
+    init(name: String, number: Int) {
+        self.name = name
+        self.number = number
+    }
+}
+```
+
+
+
+# Day 11
+
+### Private Struct
+
+- Setting a property to private likely means you'll need an initializer
+- Can make struct properties private so they can't be changed
+- `private var funds = 0`
+- Can make them read only but not settable
+- `private(set) var funds = 0`
+
+
+
+# Day 12
+
+
 
 
 
