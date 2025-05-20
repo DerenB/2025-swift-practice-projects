@@ -63,6 +63,11 @@ Going through the [Hacking with SwiftUI](https://www.hackingwithswift.com/100/sw
     - [Opaque](#opaque)
     - [Extensions](#extensions)
     - [Protocol Extensions](#protocol-extensions)
+- [Day 14](#day-14)
+    - [Optionals](#optionals)
+    - [Guard](#guard)
+    - [Nil Coalescing](#nil-coalescing)
+- [Day 15](#day-15)
 
 
 
@@ -393,9 +398,42 @@ struct Car: Vehicle {
 
 ### Protocol Extensions
 
+# Day 14
+
+### Optionals
+
+- This will run if number has a value inside it
+```
+if let unwrappedNumber = number {
+    print(square(number: unwrappedNumber))
+}
+```
+
+### Guard
+
+- This will run if myVar has a value inside it
+```
+if let unwrapped = myVar {
+    print("Run if myVar has a value inside.")
+}
+```
+- This will run if myVar does NOT have a value inside it.
+```
+guard let unwrapped = myVar else {
+    print("Run if myVar doesn't have a value inside.")
+}
+```
+
+### Nil Coalescing
+
+- Uses `??` as a type of default if the first half is nil
+- `let new = captains["Serenity"] ?? "N/A"`
 
 
 
+# Day 15
+
+- Review day
 
 
 
