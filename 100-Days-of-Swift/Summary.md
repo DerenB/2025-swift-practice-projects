@@ -53,6 +53,16 @@ Going through the [Hacking with SwiftUI](https://www.hackingwithswift.com/100/sw
 - [Day 11](#day-11)
     - [Private Struct](#private-struct)
 - [Day 12](#day-12)
+    - [Classes](#classes)
+    - [Inheritance](#inheritance)
+    - [Override](#override)
+    - [Final](#final)
+    - [Deinitializer](#deinitializer)
+- [Day 13](#day-13)
+    - [Protocol](#protocol)
+    - [Opaque](#opaque)
+    - [Extensions](#extensions)
+    - [Protocol Extensions](#protocol-extensions)
 
 
 
@@ -313,6 +323,75 @@ struct Player {
 
 # Day 12
 
+### Classes
+
+```
+class Employee {
+    let hours: Int
+
+    init(hours: Int) {
+        self.hours = hours
+    }
+}
+```
+
+### Inheritance
+
+```
+class Developer: Employee {
+    func work() {
+        print("I'm working")
+    }
+}
+```
+- Have to initialize all values from parent class inheriting from
+
+### Override
+
+override func work() {
+    print("I'm working extra.")
+}
+
+### Final
+
+- Final classes can inherit other classes, but it cannot be used as a parent class to another class
+
+### Deinitializer
+
+
+
+# Day 13
+
+### Protocol
+
+- You can declare a protocol that must be conformed to
+- Create the protocol:
+```
+protocol Vehicle {
+    func estimateTime(for distance: Int) -> Int
+    func travel(distance: Int)
+}
+```
+- Implement the protocol:
+```
+struct Car: Vehicle {
+    func estimateTime(for distance: Int) -> Int {
+        distance / 50
+    }
+    func travel(distance: Int) {
+        print("I drove x distance")
+    }
+    func openSunroof() {
+        print("Sunny day")
+    }
+}
+```
+
+### Opaque
+
+### Extensions
+
+### Protocol Extensions
 
 
 
