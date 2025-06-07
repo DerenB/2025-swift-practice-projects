@@ -14,6 +14,14 @@
   - [State](#state)
   - [Binding State to User Interface Controls](#binding-state-to-user-interface-controls)
   - [ForEach loop](#foreach-loop)
+- [Day 17](#day-17)
+  - [State Change](#state-change)
+  - [Currency Entry Fields](#currency-entry-fields)
+  - [Numerical Keyboard](#numerical-keyboard)
+  - [Section Titles](#section-titles)
+  - [New Page Picker vs Dropdown](#new-page-picker-vs-dropdown)
+  - [Hiding the Keyboard](#hiding-the-keyboard)
+- [Day 18: Review](#day-18-review)
 
 
 
@@ -104,10 +112,50 @@ struct ContentView: View {
   }
 }
 ```
- 
 
 
 
+# Day 17
+
+ ## State Change
+
+ - When a `@State` property changes, SwiftUI will re-invoke the `body` property and reload the UI
+
+ ## Currency Entry Fields
+
+ - Gets the user's default currency, or uses USD if nothing found:
+ - `TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))`
+
+## Numerical Keyboard
+
+- Add a modifier to a text field that specifies the keyboard type
+- `.keyboardType(.decimalPad)`
+- `.keyboardType(.numberPad)`
+
+## Section Titles
+
+- Older Option: `Section(header: Text("Picker: New Page"))`
+- Newer Option: `Section("User Input")`
+
+## New Page Picker vs Dropdown
+
+## Hiding the Keyboard
+
+- At top: `@FocusState private var amountIsFocused: Bool`
+- As modifier on form:
+```
+.toolbar {
+  if amountIsFocused {
+    Button("Done") {
+      amountIsFocused = false
+    }
+  }
+}
+```
+
+
+
+# Day 18: Review
 
 
 
